@@ -86,7 +86,7 @@
                     const qualificationsMet = requiredQualifications.every(q => qualifications.includes(q));
                     const desiredMet = desiredSkills.length === 0 || desiredSkills.some(skill => skills.includes(skill));
 
-                    if (skillsMet && qualificationsMet && desiredMet) {
+                    if (skillsMet && qualificationsMet) {
                         resultText += `<li>Qualified for ${position}</li>`;
                     } else if (skillsMet && !qualificationsMet) {
                         resultText += `<li>Rejected for ${position} - Missing Qualifications: ${requiredQualifications.filter(q => !qualifications.includes(q))}</li>`;
